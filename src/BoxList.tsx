@@ -4,8 +4,8 @@ import NewBoxForm from "./NewBoxForm";
 
 export interface BoxInterface {
   id: string,
-  width: number,
-  height: number,
+  width: string,
+  height: string,
   backgroundColor: string,
 }
 

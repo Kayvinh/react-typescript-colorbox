@@ -10,6 +10,7 @@
     "@types/node": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "jest-dom": "^4.0.0",
     "react": "*",
     "react-dom": "*",
     "react-scripts": "*",

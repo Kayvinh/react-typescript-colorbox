@@ -20,7 +20,7 @@ interface BoxWithRemoveInterface extends BoxInterface {
 }
 
 
-function Box({ id, width = 5, height = 5, backgroundColor, remove }
+function Box({ id, width = '5', height = '5', backgroundColor, remove }
   :BoxWithRemoveInterface ) {
 
   /** Remove a box. */
