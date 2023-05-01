@@ -1,7 +1,7 @@
 import React from "react";
 import Box from "./Box";
-import { render } from "@testing-library/react"
-import '@testing-library/jest-dom'
+import { render } from "@testing-library/react";
+import '@testing-library/jest-dom';
 
 const testBox = <Box
     id="1"
@@ -20,7 +20,6 @@ describe("Box", function () {
     test("has the proper style", function () {
         const { container } = render(testBox);
         const box = container.querySelector(".Box-box")
-        console.log(box);
         expect(box).toBeInTheDocument();
         expect(box).toHaveStyle({
             'background-color': 'green',
