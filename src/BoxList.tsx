@@ -19,7 +19,6 @@ export interface BoxInterface {
  * 
  * App -> BoxList -> { NewBoxForm, Box }
  */
-
 function BoxList() {
   const [boxes, setBoxes] = useState<BoxInterface[]>([]);
 

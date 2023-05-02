@@ -1,5 +1,9 @@
 import { BoxInterface } from "./BoxList";
 
+interface BoxWithRemoveInterface extends BoxInterface {
+  remove: Function;
+}
+
 /** Colored box presentation
  *
  * Props:
@@ -14,12 +18,6 @@ import { BoxInterface } from "./BoxList";
  *
  * BoxList -> Box
  */
-
-interface BoxWithRemoveInterface extends BoxInterface {
-  remove: Function;
-}
-
-
 function Box({ id, width = '5', height = '5', backgroundColor, remove }
   :BoxWithRemoveInterface ) {
 

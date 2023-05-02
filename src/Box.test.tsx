@@ -1,14 +1,15 @@
 import React from "react";
 import Box from "./Box";
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import '@testing-library/jest-dom';
 
+const testFunc = jest.fn();
 const testBox = <Box
     id="1"
     width="10"
     height="5"
     backgroundColor="green"
-    remove={function (id: string) { return id }}
+    remove={testFunc}
 />
 
 describe("Box", function () {
@@ -32,5 +33,12 @@ describe("Box", function () {
         const {container} = render(testBox);
 
         expect(container).toMatchSnapshot();
+    })
+
+    test("calls function when button is clicked", function () {
+        const {container} = render(testBox);
+        const btn = container.querySelector(".Box-removeBtn");
+        fireEvent.click(btn!);
+        expect(testFunc).toHaveBeenCalled();
     })
 })
